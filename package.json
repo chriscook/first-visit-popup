@@ -1,0 +1,41 @@
+{
+	"name": "FirstVisitPopup",
+	"version": "1.0",
+	"title": "First Visit Popup",
+	"author": {
+		"name": "Chris Cook",
+		"url": "http://chris-cook.co.uk"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "MIT-LICENSE.txt"
+		},
+		{
+			"type": "GPLv2",
+			"url": "GPL-LICENSE.txt"
+		}
+	],
+	"dependencies": {
+		"jquery": "1"
+	},
+	"description": "Shows a message to the user on their first visit to your page.",
+	"keywords": [
+		"popup",
+		"help",
+		"message"
+	],
+	"homepage": "http://chris-cook.co.uk",
+	"maintainers": [
+		{
+			"name": "Chris Cook",
+			"url": "http://chris-cook.co.uk"
+		}
+	],
+	"files": [
+		"demo.html",
+		"jquery.firstVisitPopup.js",
+		"jquery.firstVisitPopup.min.js",
+		"readme.md"
+	]
+}
