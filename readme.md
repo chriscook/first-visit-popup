@@ -13,11 +13,13 @@ __First Visit Popup__ is a _jQuery_ plug-in which shows the user a message on th
 1. Add the file (`jquery.firstVisitPopup.js`) to your project, along with _jQuery_.
 2. Add the following _jQuery_ to your page, to be executed on load:
 
+```javascript
 	$.firstVisitPopup({
 		cookieName : 'homepage',
 		header : 'Welcome to my site',
 		body : '<p>Hello, welcome to my website.</p>'
 	});
+```
 
 ...where `cookieName` is a name for cookie which will determine whether or not to show the message again, `header` is the header for the message (enclosed in a `h2` tag by defualt), and `body` is the body text for the message (not enclosed in any tags by default).
 
