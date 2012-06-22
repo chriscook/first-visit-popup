@@ -67,6 +67,7 @@
 			<p>Duis sed nisi arcu. Etiam rhoncus massa vitae mauris bibendum tincidunt. Duis id consectetur dui. Vestibulum odio magna, rhoncus at condimentum bibendum, faucibus vitae eros. Integer id arcu quis elit porta ullamcorper id a mauris. Suspendisse a turpis tincidunt diam iaculis euismod. Praesent nec metus purus. Donec pellentesque elementum nunc non porta. Maecenas in mi eu sem pretium rhoncus at nec dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras magna dolor, suscipit eget condimentum et, suscipit nec diam. Pellentesque eu libero elit. Sed ut lectus vitae nisl luctus volutpat et ut est. Donec molestie felis quis urna dignissim vitae vehicula turpis mattis. Vestibulum ut sapien dictum dolor ultricies rhoncus. Nulla et tellus eros.</p>
 			<p>In consectetur purus in sem suscipit fermentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae mauris justo. Pellentesque rutrum vehicula risus, in adipiscing metus dictum eu. Fusce tempor consequat felis, at eleifend nisl gravida eu. In ut odio non justo pellentesque fermentum et sit amet nisl. Nullam vel est sollicitudin dui vulputate cursus. Nullam sed diam ac ipsum sodales varius.</p>
 			<p>Fusce consectetur erat non turpis tincidunt interdum viverra nisl porttitor. Duis tristique velit et enim sollicitudin eu mattis diam ultrices. Morbi lacus augue, convallis sed accumsan sed, adipiscing quis velit. Proin mollis lacus non arcu luctus faucibus. Vestibulum ut turpis nisl, sed volutpat enim. In consequat semper leo, ut mollis nisi adipiscing eget. Curabitur rutrum consequat leo, nec posuere neque tristique eu. Quisque vitae libero sit amet lorem ullamcorper condimentum vitae quis justo. Pellentesque ultrices blandit lacus sed fringilla. Nunc nec eros nunc, ut ornare sem.</p>
+			<p><a id="show-message">Show mesage again</a></p>
 		</div>
 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -76,7 +77,8 @@
 				$.firstVisitPopup({
 					cookieName : 'homepage',
 					header : 'Welcome to my site',
-					body : '<p>Hello, welcome to my website.</p>'
+					body : '<p>Hello, welcome to my website.</p>',
+					showAgainSelector: '#show-message'
 				});
 			});
 		</script>

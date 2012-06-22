@@ -1,7 +1,7 @@
 First Visit Popup
 =================
 
-Version 1.0
+Version 1.1
 -----------
 
 ### Introduction
@@ -17,11 +17,12 @@ __First Visit Popup__ is a _jQuery_ plug-in which shows the user a message on th
 	$.firstVisitPopup({
 		cookieName : 'homepage',
 		header : 'Welcome to my site',
-		body : '<p>Hello, welcome to my website.</p>'
+		body : '<p>Hello, welcome to my website.</p>',
+		showAgainSelector : '#show-message'
 	});
 ```
 
-...where `cookieName` is a name for cookie which will determine whether or not to show the message again, `header` is the header for the message (enclosed in a `h2` tag by defualt), and `body` is the body text for the message (not enclosed in any tags by default).
+...where `cookieName` is a name for cookie which will determine whether or not to show the message again, `header` is the header for the message (enclosed in a `h2` tag by defualt), `body` is the body text for the message (not enclosed in any tags by default), and `showAgainSelector` is the selector of an element on the page the user can click to show the message again (optional).
 
 A demo is available in demo.html.
 

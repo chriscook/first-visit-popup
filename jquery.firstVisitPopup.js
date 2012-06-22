@@ -1,5 +1,5 @@
 /*
- * First Visit Popup jQuery Plugin version 1.0
+ * First Visit Popup jQuery Plugin version 1.1
  * Chris Cook - chris@chris-cook.co.uk
  */
 
@@ -10,12 +10,23 @@
 	$.firstVisitPopup = function (settings) {
 
 		if (!getCookie('fvpp' + settings.cookieName)) {
-			$('body').append('<div id="fvpp-blackout"></div><div id="fvpp-dialog"><a id="fvpp-close">&#10006;</a><h2>' + settings.header + '</h2>' + settings.body + '</div>');
-			$('#fvpp-blackout, #fvpp-close').on('click', function () {
-				$('#fvpp-blackout').hide();
-				$('#fvpp-dialog').hide();
-				setCookie('fvpp' + settings.cookieName, 'true');
+			showMessage();
+		}
+
+		if (typeof(settings.showAgainSelector) !== 'undefined') {
+			$(settings.showAgainSelector).on('click', function () {
+				showMessage();
 			});
+		}
+
+		$('body').on('click', '#fvpp-blackout, #fvpp-close', function () {
+			$('#fvpp-blackout').remove();
+			$('#fvpp-dialog').remove();
+			setCookie('fvpp' + settings.cookieName, 'true');
+		});
+
+		function showMessage() {
+			$('body').append('<div id="fvpp-blackout"></div><div id="fvpp-dialog"><a id="fvpp-close">&#10006;</a><h2>' + settings.header + '</h2>' + settings.body + '</div>');
 		}
 
 		function setCookie(name, value) {
