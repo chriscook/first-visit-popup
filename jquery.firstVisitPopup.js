@@ -9,8 +9,8 @@
 
 	$.firstVisitPopup = function (settings) {
 
-		var $blackout = $('#blackout');
-		var $dialog = $('#dialog');
+		var $blackout = $('#fvpp-blackout');
+		var $dialog = $('#fvpp-dialog');
 		var setCookie = function (name, value) {
 			var date = new Date(),
 				expires = 'expires=';
