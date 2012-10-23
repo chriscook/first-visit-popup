@@ -1,5 +1,5 @@
 /*
- * First Visit Popup jQuery Plugin version 1.1
+ * First Visit Popup jQuery Plugin version 1.2
  * Chris Cook - chris@chris-cook.co.uk
  */
 
