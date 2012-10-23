@@ -39,7 +39,7 @@
 		}
 		var hideMessage = function () {
 			$blackout.hide();
-			$diaog.hide();
+			$dialog.hide();
 			setCookie('fvpp' + settings.cookieName, 'true');
 		}
 
