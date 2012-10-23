@@ -70,14 +70,19 @@
 			<p><a id="show-message">Show mesage again</a></p>
 		</div>
 
+		<div id="fvpp-blackout"></div>
+		<div id="fvpp-dialog">
+			<a id="fvpp-close">&#10006;</a>
+			<h2>Welcome to my site</h2>
+			<p>Hello, welcome to my website.</p>
+		</div>
+
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script src="jquery.firstVisitPopup.js"></script>
 		<script>
 			$(function () {
 				$.firstVisitPopup({
 					cookieName : 'homepage',
-					header : 'Welcome to my site',
-					body : '<p>Hello, welcome to my website.</p>',
 					showAgainSelector: '#show-message'
 				});
 			});
