@@ -22,6 +22,7 @@
 
 			#fvpp-blackout {
 				display: none;
+				z-index: 499;
 				position: fixed;
 				width: 100%;
 				height: 100%;
@@ -31,8 +32,9 @@
 				opacity: 0.5;
 			}
 
-			#fvpp-dialog {
+			#my-welcome-message {
 				display: none;
+				z-index: 500;
 				position: fixed;
 				width: 36%;
 				left: 30%;
@@ -72,9 +74,7 @@
 			<p><a id="show-message">Show mesage again</a></p>
 		</div>
 
-		<div id="fvpp-blackout"></div>
-		<div id="fvpp-dialog">
-			<a id="fvpp-close">&#10006;</a>
+		<div id="my-welcome-message">
 			<h2>Welcome to my site</h2>
 			<p>Hello, welcome to my website.</p>
 		</div>
@@ -83,7 +83,7 @@
 		<script src="jquery.firstVisitPopup.js"></script>
 		<script>
 			$(function () {
-				$.firstVisitPopup({
+				$('#my-welcome-message').firstVisitPopup({
 					cookieName : 'homepage',
 					showAgainSelector: '#show-message'
 				});

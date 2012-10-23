@@ -7,10 +7,11 @@
 
 	'use strict';
 
-	$.firstVisitPopup = function (settings) {
+	$.fn.firstVisitPopup = function (settings) {
 
-		var $blackout = $('#fvpp-blackout');
-		var $dialog = $('#fvpp-dialog');
+		var $body = $('body');
+		var $dialog = $(this);
+		var $blackout;
 		var setCookie = function (name, value) {
 			var date = new Date(),
 				expires = 'expires=';
@@ -43,12 +44,16 @@
 			setCookie('fvpp' + settings.cookieName, 'true');
 		}
 
+		$body.append('<div id="fvpp-blackout"></div>');
+		$dialog.append('<a id="fvpp-close">&#10006;</a>');
+		$blackout = $('#fvpp-blackout');
+
 		if (!getCookie('fvpp' + settings.cookieName)) {
 			showMessage();
 		}
 
 		$(settings.showAgainSelector).on('click', showMessage);
-		$('body').on('click', '#fvpp-blackout, #fvpp-close', hideMessage);
+		$body.on('click', '#fvpp-blackout, #fvpp-close', hideMessage);
 
 	};
 
