@@ -48,7 +48,9 @@
 		$dialog.append('<a id="fvpp-close">&#10006;</a>');
 		$blackout = $('#fvpp-blackout');
 
-		if (!getCookie('fvpp' + settings.cookieName)) {
+		if (getCookie('fvpp' + settings.cookieName)) {
+			hideMessage();
+		} else {
 			showMessage();
 		}
 
